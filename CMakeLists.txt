@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.1)
-project(base-logging VERSION 1.0)
+cmake_minimum_required(VERSION 3.9)
+project(base-logging
+	VERSION 2.0.0
+	DESCRIPTION "Basic logging utilities."
+)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)

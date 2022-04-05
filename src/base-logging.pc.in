@@ -4,9 +4,9 @@ libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
 includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
 
 Name: base-logging
-Description: Rock base library containing logging utilities.
+Description: @PROJECT_DESCRIPTION@
 Version: @PROJECT_VERSION@
 Requires: base-types
-Libs: -L${libdir} -lbase-types
+Libs: -L${libdir} -lbase-logging
 Cflags: -I${includedir}
 

@@ -15,6 +15,7 @@ target_link_libraries(logging
 
 set_target_properties(logging PROPERTIES
 	OUTPUT_NAME base-logging
+	POSITION_INDEPENDENT_CODE ON
 )
 
 # Install header files
