@@ -7,5 +7,5 @@
   <maintainer>Thomas Roehr/thomas.roehr@dfki.de</maintainer>
   <license>New BSD License</license>
   <url>https://github.com/rock-core/base-logging</url>
-  <depend package="base/cmake" />
+  <depend package="base/types" />
 </package>
