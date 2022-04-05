@@ -9,12 +9,11 @@ find_package(base-types)
 # Where to install .cmake, .pc and .hpp files
 set(CMAKE_DESTINATION      ${CMAKE_INSTALL_LIBDIR}/cmake/base-logging)
 set(PKGCONFIG_DESTINATION  ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
-set(INCLUDE_DESTINATION    ${CMAKE_INSTALL_INCLUDEDIR}/base)
 
-add_subdirectory(base)
+add_subdirectory(src)
 
 # Export the library interface
-install(EXPORT logging-targets
+install(EXPORT base-logging-targets
 	NAMESPACE base::
 	DESTINATION ${CMAKE_DESTINATION}
 )

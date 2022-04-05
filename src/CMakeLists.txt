@@ -1,11 +1,11 @@
 add_library(logging
-	logging/logging_printf_style.cpp
+	logging_printf_style.cpp
 )
 
 target_include_directories(logging
 	PUBLIC
-		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
-		$<INSTALL_INTERFACE:include>
+		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>/src
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
 target_link_libraries(logging
@@ -18,18 +18,18 @@ set_target_properties(logging PROPERTIES
 )
 
 # Install header files
-install(DIRECTORY ./
-	DESTINATION ${INCLUDE_DESTINATION}
+install(DIRECTORY base
+	DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 	FILES_MATCHING PATTERN "*.hpp"
 )
 
 # Install the binary
-install(TARGETS logging EXPORT logging-targets)
+install(TARGETS logging EXPORT base-logging-targets)
 
 # Install pkg-config file
 configure_file(base-logging.pc.in base-logging.pc @ONLY)
 install(
-	FILES ${PROJECT_BINARY_DIR}/base/base-logging.pc
+	FILES ${PROJECT_BINARY_DIR}/src/base-logging.pc
 	DESTINATION ${PKGCONFIG_DESTINATION}
 )
 
