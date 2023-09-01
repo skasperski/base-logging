@@ -4,7 +4,7 @@ add_library(logging
 
 target_include_directories(logging
 	PUBLIC
-		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>/src
+		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
 		$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
